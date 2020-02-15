@@ -17,7 +17,8 @@
   * [ROUND](#round)
   * [LENGTH](#length)
   * [CONCAT](#concat)
-  * [SUM y COUNT](#sum-y-count)
+  * [SUM](#sum)
+  * [COUNT](#count)
   * [JOIN](#join)
     * [LEFT JOIN](#left-join)
     * [RIGHT JOIN](#right-join)
@@ -121,6 +122,7 @@ Es utilizado para buscar un patron especifico
  Where name LIKE '%United%'
  ```
  El resultado de esta consulta es el nombre de todos los paises que contengan United
+ 
 #### ORDER BY
 Sirve para especificar el orden en el que quieres que aparezca la respuesta
  ```
@@ -130,27 +132,115 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
  ORDER BY population DESC;
  ```
  En esta consulta la poblacion aparecera de forma descendente
+ 
 #### DISTINCT
  Sirve para que en las consultas no aparezcan filas repetidas
   ```
-  
+  SELECT DISTINCT continent
+  FROM world;
   ```
+  Si ponemos el distinct los continenetes solo apareceran una vez. No se repetiran 
+  
 #### HAVING
-
+Se utiliza para incluir condiciones del tipo SUM, MAX, .. 
+ ```
+ SELECT name
+ FROM casting JOIN actor
+   ON  actorid = actor.id
+ WHERE ord = 1
+ GROUP BY name
+ HAVING COUNT(movieid) >= 15;
+ ```
+ Con esta consulta nos saldra una lista en oreden alfabetico, de los actores que por lo menos tubieron 15 papeles protagonistas
+ 
 #### GROUP BY
-
+Nos permite agrupar las filas resultado de una consulta en conjuntos y aplicar funciones sobre esos conjuntos de filas
+ ```
+ SELECT 
+  teamname,
+  COUNT(teamid)
+ FROM eteam JOIN goal ON id = teamid
+ GROUP BY teamname;
+ ```
+ Con esta consulta nos saldra el total de goles de cada equipo en orden alfabetico
+ 
 #### ROUND
-
+Se utiliza para redondear a número de decimales especificado
+ ```
+ SELECT name, 
+        CONCAT(CAST(ROUND(100*population/
+                                (SELECT population 
+                                 FROM world 
+                                 WHERE name = 'Germany'),
+                           0),
+                      '%')
+ FROM world
+ WHERE continent = 'Europe';
+ ```
+ Con esta consulta redondearemos los porcentajes a decimales
+ 
 #### LENGTH
-
+Se utiliza para obtenes la longitud de una cadena 
+ ```
+ SELECT name, capital
+ FROM world
+ WHERE LENGTH(name) = LENGTH(capital);
+ ```
+ Con esta consulta obtenemos los paises y capitales cuyo nombre tiene el mismo numero de letras
+ 
 #### CONCAT
+Esta función devuelve una cadena resultante de la combinación de dos o más valores de cadena de una manera integral
+ ```
+ 
+ ```
+#### SUM
+Permite obtener la suma total de los valores de una columna de tipo numérico
+```
+SELECT SUM(population)
+FROM world;
+```
+Esta consultara sumara las poblaciones de todos los paises y nos enseñara el resutado, que seria la poblacion total en todo el mundo
 
-#### SUM y COUNT
-
+#### COUNT
+Devuelve el número de registros que cumplen una determinada condición
+ ```
+ SELECT COUNT(name)
+ FROM world
+ WHERE area >= 1000000;
+ ```
+ En esta consulta pedimos los paises que tienen un area de al menos 1000000
+ 
 #### JOIN
-
+Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
+ ```
+ SELECT player,teamid,stadium,mdate
+ FROM game JOIN goal ON (id=matchid)
+ WHERE teamid='GER';
+ ```
+ Esta consulta nos muestra todos los goles que hizo Alemania y necesitamos el join porque vamos a utilizar la tabla game y la goal 
+ 
 ##### LEFT JOIN
-
+Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nulos en la tabla de la derecha
+ ```
+ SELECT teacher.name, dept.name
+ FROM teacher 
+ LEFT JOIN dept ON (teacher.dept=dept.id);
+ ```
+ Esta consulta lista todos los departamentos sean nulos o no ya que va a listar a todos los profesores 
+ 
 ##### RIGHT JOIN
-
+Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la tabla de la izquierda
+ ```
+ SELECT teacher.name, dept.name
+ FROM teacher 
+ RIGHT JOIN dept ON (teacher.dept=dept.id);
+ ```
+ Esta consulta lista todos los detartamentos y si hay alguno nulo no lo lista
+ 
 ##### INNER JOIN
+Devuelven únicamente aquellos registros/filas que tienen elementos en las dos tablas
+ ```
+ SELECT teacher.name, dept.name
+ FROM teacher INNER JOIN dept ON (teacher.dept=dept.id);
+ ```
+Esta consulta nos lista todos los departamentos y profesores pero si hay algun nulo en cualquiera de los dos no los lista
