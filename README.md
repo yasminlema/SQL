@@ -1,12 +1,12 @@
 # SQL
 ## Índice
 * [¿Que es SQL?](GH-15)
-* [Estructura del lenguaje SQL](#18)
-* [Clausulas SQL](#24)
-  * [SELECT](#25)
-  * [FROM](#33)
-  * [WHERE](#40)
-    * [Simbolos]( https://github.com/yasminlema/apuntes-SQL.js/issues/49)
+* [Estructura del lenguaje SQL](# 18)
+* [Clausulas SQL](# 24)
+  * [SELECT](# 25)
+  * [FROM](# 33)
+  * [WHERE](# 40)
+    * [Simbolos](# 49)
     * [IN](#87)
     * [BETWEEN](#96)
     * [LIKE](#105)
