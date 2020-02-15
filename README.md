@@ -1,6 +1,6 @@
 # SQL
 ## Índice
-* [¿Que es SQL?](#¿-que-es-sql-?)
+* [¿Que es SQL?](#que-es-sql)
 * [Estructura SQL](#estructura-sql)
 * [Clausulas SQL](#clausulas-sql)
   * [SELECT](#select)
