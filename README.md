@@ -1,6 +1,6 @@
 # SQL
 ## Índice
-* [¿Que es SQL?](#15)
+* [¿Que es SQL?](GH-15)
 * [Estructura del lenguaje SQL](#18)
 * [Clausulas SQL](#24)
   * [SELECT](#25)
