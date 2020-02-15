@@ -6,7 +6,7 @@
   * [SELECT](#25)
   * [FROM](#33)
   * [WHERE](#40)
-    * [Simbolos](#49)
+    * [Simbolos]( https://github.com/yasminlema/apuntes-SQL.js/issues/49)
     * [IN](#87)
     * [BETWEEN](#96)
     * [LIKE](#105)
