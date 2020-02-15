@@ -12,6 +12,16 @@
     * [LIKE](#like)
   * [ORDER BY](#order-by)
   * [DISTINCT](#distinct)
+  * [HAVING](#having)
+  * [GROUP BY](#group-by)
+  * [ROUND](#round)
+  * [LENGTH](#length)
+  * [CONCAT](#concat)
+  * [SUM y COUNT](sum-y-count)
+  * [JOIN](#join)
+    * [LEFT JOIN](left-join)
+    * [RIGHT JOIN](right-join)
+    * [INNER JOIN](INNER-JOIN)
   
 ### ¿Que es SQL?
 Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras.
@@ -125,3 +135,13 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
   ```
   
   ```
+#### HAVING
+#### GROUP BY
+#### ROUND
+#### LENGTH
+#### CONCAT
+#### SUM y COUNT
+#### JOIN
+##### LEFT JOIN
+##### RIGHT JOIN
+##### INNER JOIN
