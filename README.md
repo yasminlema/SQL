@@ -1,17 +1,17 @@
 # SQL
 ## Índice
-* [¿Que es SQL?](¿que-es-sql?)
-* [Estructura del lenguaje SQL](estructura-del-lenguaje-sql)
-* [Clausulas SQL](clausulas-sql)
-  * [SELECT](select)
-  * [FROM](from)
-  * [WHERE](where)
-    * [Simbolos](simbolos)
-    * [IN](in)
-    * [BETWEEN](between)
-    * [LIKE](like)
-  * [ORDER BY](order-by)
-  * [DISTINCT](distinct)
+* [¿Que es SQL?](#¿que-es-sql?)
+* [Estructura del lenguaje SQL](#estructura-del-lenguaje-sql)
+* [Clausulas SQL](#clausulas-sql)
+  * [SELECT](#select)
+  * [FROM](#from)
+  * [WHERE](#where)
+    * [Simbolos](#simbolos)
+    * [IN](#in)
+    * [BETWEEN](#between)
+    * [LIKE](#like)
+  * [ORDER BY](#order-by)
+  * [DISTINCT](#distinct)
   
 ### ¿Que es SQL?
 Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras.
