@@ -1,26 +1,28 @@
 # SQL
-### Índice
-* [¿Que es SQL?](#8)
-* [Estructura del lenguaje SQL](#11)
-* [Clausulas SQL](#55)
-  * [SELECT](#)
-  * [FROM](#)
-  * [WHERE](#)
-    * [Simbolos](#)
-    * [IN](#)
-  * [ORDER BY](#)
+## Índice
+* [¿Que es SQL?](#15)
+* [Estructura del lenguaje SQL](#18)
+* [Clausulas SQL](#24)
+  * [SELECT](#25)
+  * [FROM](#33)
+  * [WHERE](#40)
+    * [Simbolos](#49)
+    * [IN](#87)
+    * [BETWEEN](#96)
+    * [LIKE](#105)
+  * [ORDER BY](#113)
   
-#### ¿Que es SQL?
+### ¿Que es SQL?
 Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras.
 
-#### Estructura SQL
+### Estructura SQL
 * La primera línea es una cláusula SELECT que sirve para indicarle a la base de datos que columnas queremos ver.
 * La segunda línea usa FROM para especificar en que tabla se encuentra lo que buscamos.
 * La tercera línea es donde utilizaremos el resto de sentencias 
 * la consulta **_SIEMPRE_** tiene que tener al final un punto y coma  
 
-#### Clausulas SQL
-##### SELECT
+### Clausulas SQL
+#### SELECT
 Sirve para que en la tabla se nos muestren las columnas que nosotros queremos 
   ```
   SELECT population 
@@ -28,14 +30,14 @@ Sirve para que en la tabla se nos muestren las columnas que nosotros queremos
   WHERE name = 'Germany' ;
   ```
   Con esta consulta solo nos aparecera la columna de la poblacion 
-##### FROM
+#### FROM
 Sirve para seleccionar la tabla de donde vamos a seleccionar los datos
   ```
   SELECT population
   FROM world ;
   ```
   Con esta consulta le estamos indicando que los datos que le pedimos se encuentran en la tabla world
-##### WHERE
+#### WHERE
 Aquí es donde estableceremos la condición que van a tener que cumplir todas las filas para salir en el resultado de la consulta
   ```
   SELECT name 
@@ -44,7 +46,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   ```
   Con esta consulta ponemos la condicion de que la poblacion tiene que ser mayor o igual a 200000000
   
-###### Simbolos
+##### Simbolos
 * % : sutituye de cero a varios caracteres
   ```
   SELECT name
@@ -81,5 +83,44 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   WHERE name <> '%United%' ;
   ```
     El resultado de esta consulta sera una lista de todos los paises que no tengan en su nombre United
-
-##### ORDER BY
+    
+##### IN
+Coje todos los miembros que estan entre paréntesis 
+ ```
+ SELECT name, population
+ FROM world
+ Where name IN ('France', 'Germany', 'Italy');
+ ```
+ En esta consulta pedimos el nombre y poblacion de Francia, Alemania e Italia
+ 
+##### BETWEEN 
+Coje todos los miembros contenidos en el rango 
+ ```
+ SELECT name, area
+ FROM world
+ WHERE area BETWEEN 200000 AND 250000;
+ ```
+ El resultado de esta consulta es el nombre y area de todos los paises con un area entre 200000 y 250000
+ 
+##### LIKE
+Es utilizado para buscar un patron especifico
+ ```
+ SELECT name
+ FROM world
+ Where name LIKE '%United%'
+ ```
+ El resultado de esta consulta es el nombre de todos los paises que contengan United
+#### ORDER BY
+Sirve para especificar el orden en el que quieres que aparezca la respuesta
+ ```
+ SELECT name, population 
+ FROM world
+ WHERE name IN ('Sweden', 'Norway', 'Denmark')
+ ORDER BY population DESC;
+ ```
+ En esta consulta la poblacion aparecera de forma descendente
+ #### DISTINCT
+ Sirve para que en las consultas no aparezcan filas repetidas
+  ```
+  
+  ```
