@@ -37,7 +37,7 @@ Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos
 #### SELECT
 Sirve para que en la tabla se nos muestren las columnas que nosotros queremos 
   ```
-  SELECT population 
+  **_SELECT_** population 
   FROM world
   WHERE name = 'Germany' ;
   ```
