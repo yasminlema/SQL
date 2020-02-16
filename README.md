@@ -101,7 +101,7 @@ Coje todos los miembros que estan entre paréntesis
  ```ruby
  SELECT name, population
  FROM world
- Where name IN ('France', 'Germany', 'Italy');
+ WHERE name IN ('France', 'Germany', 'Italy');
  ```
  En esta consulta pedimos el nombre y poblacion de Francia, Alemania e Italia
  
@@ -119,7 +119,7 @@ Es utilizado para buscar un patron especifico
  ```ruby
  SELECT name
  FROM world
- Where name LIKE '%United%'
+ WHERE name LIKE '%United%'
  ```
  El resultado de esta consulta es el nombre de todos los paises que contengan United
  
