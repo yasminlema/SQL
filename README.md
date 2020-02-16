@@ -191,8 +191,9 @@ Se utiliza para obtenes la longitud de una cadena
 #### CONCAT
 Esta función devuelve una cadena resultante de la combinación de dos o más valores de cadena de una manera integral
  ```
- 
+ SELECT CONCAT("SQL ", "is ", "fun!") AS ConcatenatedString;
  ```
+ Esta consulta nos daria una columna llamada ConcatenatedString donde pondria "SQL is fun!"
 #### SUM
 Permite obtener la suma total de los valores de una columna de tipo numérico
 ```
