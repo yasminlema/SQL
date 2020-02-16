@@ -215,8 +215,8 @@ Devuelve el número de registros que cumplen una determinada condición
 Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
  ```ruby
  SELECT player,teamid,stadium,mdate
- FROM game JOIN goal ON (id=matchid)
- WHERE teamid='GER';
+ FROM game JOIN goal ON (id = matchid)
+ WHERE teamid = 'GER';
  ```
  Esta consulta nos muestra todos los goles que hizo Alemania y necesitamos el join porque vamos a utilizar la tabla game y la goal 
  
@@ -225,7 +225,7 @@ Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nul
  ```ruby
  SELECT teacher.name, dept.name
  FROM teacher 
- LEFT JOIN dept ON (teacher.dept=dept.id);
+ LEFT JOIN dept ON (teacher.dept = dept.id);
  ```
  Esta consulta lista todos los departamentos sean nulos o no ya que va a listar a todos los profesores 
  
@@ -234,7 +234,7 @@ Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la t
  ```ruby
  SELECT teacher.name, dept.name
  FROM teacher 
- RIGHT JOIN dept ON (teacher.dept=dept.id);
+ RIGHT JOIN dept ON (teacher.dept = dept.id);
  ```
  Esta consulta lista todos los detartamentos y si hay alguno nulo no lo lista
  
@@ -242,6 +242,6 @@ Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la t
 Devuelven únicamente aquellos registros/filas que tienen elementos en las dos tablas
  ```ruby
  SELECT teacher.name, dept.name
- FROM teacher INNER JOIN dept ON (teacher.dept=dept.id);
+ FROM teacher INNER JOIN dept ON (teacher.dept = dept.id);
  ```
 Esta consulta nos lista todos los departamentos y profesores pero si hay algun nulo en cualquiera de los dos no los lista
