@@ -87,7 +87,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   FROM world
   WHERE population >= 1000000 ;
   ```
-    El resultado de esta consulta seran todos los paises con una poblacion mayor o igual a 1000000
+   El resultado de esta consulta seran todos los paises con una poblacion mayor o igual a 1000000
 * <> : no es igual a 
   ```ruby
   SELECT name
