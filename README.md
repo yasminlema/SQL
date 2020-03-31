@@ -23,15 +23,23 @@
     * [LEFT JOIN](#left-join)
     * [RIGHT JOIN](#right-join)
     * [INNER JOIN](#INNER-JOIN)
+* [DDL](#DDL)
+* [DML](#DML)
   
 ### ¿Que es SQL?
-Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras.
+Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras. Dentro de SQL podemos encontrar 6 sublenguajes:
+* DQL (Data Query Language): permite a los usuarios la consulta y manipulación de datos.
+* DDL (Data Definition Language): es el encargado de la modificación de la estructura de los objetos de la base de datos.
+* TCL (Transaction Control Language): se utiliza para controlar el procesamiento de transacciones en una base de datos.
+* DCL (Data Control Language): permiten la administración del control de acceso de datos contenidos en la base de datos.
+* DML (Data Manipulation Language): permite a los usuarios llevar a cabo las tareas de consulta o manipulación de los datos.
+* SCL (Session Control Language): permite la gestión de una sesión de usuario.
 
 ### Estructura SQL
 * La primera línea es una cláusula SELECT que sirve para indicarle a la base de datos que columnas queremos ver.
 * La segunda línea usa FROM para especificar en que tabla se encuentra lo que buscamos.
 * La tercera línea es donde utilizaremos el resto de sentencias 
-* la consulta **_SIEMPRE_** tiene que tener al final un punto y coma  
+* la consulta **_SIEMPRE_** tiene que tener al final un punto y coma
 
 ### Clausulas SQL
 #### SELECT
@@ -245,3 +253,8 @@ Devuelven únicamente aquellos registros/filas que tienen elementos en las dos t
  FROM teacher INNER JOIN dept ON (teacher.dept = dept.id);
  ```
 Esta consulta nos lista todos los departamentos y profesores pero si hay algun nulo en cualquiera de los dos no los lista
+
+### DDL
+
+
+### DML
