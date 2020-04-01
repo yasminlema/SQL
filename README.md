@@ -24,6 +24,10 @@
     * [RIGHT JOIN](#right-join)
     * [INNER JOIN](#INNER-JOIN)
 * [DDL](#DDL)
+  * [CREATE](#CREATE)
+  * [ALTER](#ALTER)
+  * [DROP](#DROP)
+  * [TRUCATE](#TRUCATE)
 * [DML](#DML)
   
 ## ¿Que es SQL?
