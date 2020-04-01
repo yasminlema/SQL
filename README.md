@@ -26,7 +26,7 @@
 * [DDL](#DDL)
 * [DML](#DML)
   
-### ¿Que es SQL?
+## ¿Que es SQL?
 Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras. Dentro de SQL podemos encontrar 6 sublenguajes:
 * DQL (Data Query Language): permite a los usuarios la consulta y manipulación de datos.
 * DDL (Data Definition Language): es el encargado de la modificación de la estructura de los objetos de la base de datos.
@@ -35,14 +35,14 @@ Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos
 * DML (Data Manipulation Language): permite a los usuarios llevar a cabo las tareas de consulta o manipulación de los datos.
 * SCL (Session Control Language): permite la gestión de una sesión de usuario.
 
-### Estructura SQL
+## Estructura SQL
 * La primera línea es una cláusula SELECT que sirve para indicarle a la base de datos que columnas queremos ver.
 * La segunda línea usa FROM para especificar en que tabla se encuentra lo que buscamos.
 * La tercera línea es donde utilizaremos el resto de sentencias 
 * la consulta **_SIEMPRE_** tiene que tener al final un punto y coma
 
-### Clausulas SQL
-#### SELECT
+## Clausulas SQL
+### SELECT
 Sirve para que en la tabla se nos muestren las columnas que nosotros queremos 
   ```ruby
   SELECT population 
@@ -50,14 +50,14 @@ Sirve para que en la tabla se nos muestren las columnas que nosotros queremos
   WHERE name = 'Germany';
   ```
   Con esta consulta solo nos aparecera la columna de la poblacion 
-#### FROM
+### FROM
 Sirve para seleccionar la tabla de donde vamos a seleccionar los datos
   ```ruby
   SELECT population
   FROM world;
   ```
   Con esta consulta le estamos indicando que los datos que le pedimos se encuentran en la tabla world
-#### WHERE
+### WHERE
 Aquí es donde estableceremos la condición que van a tener que cumplir todas las filas para salir en el resultado de la consulta
   ```ruby
   SELECT name 
@@ -66,7 +66,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   ```
   Con esta consulta ponemos la condicion de que la poblacion tiene que ser mayor o igual a 200000000
   
-##### Simbolos
+#### Simbolos
 * % : sutituye de cero a varios caracteres
   ```ruby
   SELECT name
@@ -104,7 +104,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   ```
     El resultado de esta consulta sera una lista de todos los paises que no tengan en su nombre United
     
-##### IN
+#### IN
 Coje todos los miembros que estan entre paréntesis 
  ```ruby
  SELECT name, population
@@ -113,7 +113,7 @@ Coje todos los miembros que estan entre paréntesis
  ```
   En esta consulta pedimos el nombre y poblacion de Francia, Alemania e Italia
  
-##### BETWEEN 
+#### BETWEEN 
 Coje todos los miembros contenidos en el rango 
  ```ruby
  SELECT name, area
@@ -122,7 +122,7 @@ Coje todos los miembros contenidos en el rango
  ```
   El resultado de esta consulta es el nombre y area de todos los paises con un area entre 200000 y 250000
  
-##### LIKE
+#### LIKE
 Es utilizado para buscar un patron especifico
  ```ruby
  SELECT name
@@ -131,7 +131,7 @@ Es utilizado para buscar un patron especifico
  ```
   El resultado de esta consulta es el nombre de todos los paises que contengan United
  
-#### ORDER BY
+### ORDER BY
 Sirve para especificar el orden en el que quieres que aparezca la respuesta
  ```ruby
  SELECT name, population 
@@ -141,7 +141,7 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
  ```
   En esta consulta la poblacion aparecera de forma descendente
  
-#### DISTINCT
+### DISTINCT
  Sirve para que en las consultas no aparezcan filas repetidas
   ```ruby
   SELECT DISTINCT continent
@@ -149,7 +149,7 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
   ```
    Si ponemos el distinct los continenetes solo apareceran una vez. No se repetiran 
   
-#### HAVING
+### HAVING
 Se utiliza para incluir condiciones del tipo SUM, MAX, .. 
  ```ruby
  SELECT name
@@ -161,7 +161,7 @@ Se utiliza para incluir condiciones del tipo SUM, MAX, ..
  ```
   Con esta consulta nos saldra una lista en oreden alfabetico, de los actores que por lo menos tubieron 15 papeles protagonistas
  
-#### GROUP BY
+### GROUP BY
 Nos permite agrupar las filas resultado de una consulta en conjuntos y aplicar funciones sobre esos conjuntos de filas
  ```ruby
  SELECT 
@@ -172,7 +172,7 @@ Nos permite agrupar las filas resultado de una consulta en conjuntos y aplicar f
  ```
   Con esta consulta nos saldra el total de goles de cada equipo en orden alfabetico
  
-#### ROUND
+### ROUND
 Se utiliza para redondear a número de decimales especificado
  ```ruby
  SELECT name, 
@@ -187,7 +187,7 @@ Se utiliza para redondear a número de decimales especificado
  ```
   Con esta consulta redondearemos los porcentajes a decimales
  
-#### LENGTH
+### LENGTH
 Se utiliza para obtenes la longitud de una cadena 
  ```ruby
  SELECT name, capital
@@ -196,13 +196,13 @@ Se utiliza para obtenes la longitud de una cadena
  ```
   Con esta consulta obtenemos los paises y capitales cuyo nombre tiene el mismo numero de letras
  
-#### CONCAT
+### CONCAT
 Esta función devuelve una cadena resultante de la combinación de dos o más valores de cadena de una manera integral
  ```ruby
  SELECT CONCAT("SQL ", "is ", "fun!") AS ConcatenatedString;
  ```
   Esta consulta nos daria una columna llamada ConcatenatedString donde pondria "SQL is fun!"
-#### SUM
+### SUM
 Permite obtener la suma total de los valores de una columna de tipo numérico
 ```ruby
 SELECT SUM(population)
@@ -210,7 +210,7 @@ FROM world;
 ```
  Esta consultara sumara las poblaciones de todos los paises y nos enseñara el resutado, que seria la poblacion total en todo el mundo
 
-#### COUNT
+### COUNT
 Devuelve el número de registros que cumplen una determinada condición
  ```ruby
  SELECT COUNT(name)
@@ -219,7 +219,7 @@ Devuelve el número de registros que cumplen una determinada condición
  ```
   En esta consulta pedimos los paises que tienen un area de al menos 1000000
  
-#### JOIN
+### JOIN
 Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
  ```ruby
  SELECT player,teamid,stadium,mdate
@@ -228,7 +228,7 @@ Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
  ```
   Esta consulta nos muestra todos los goles que hizo Alemania y necesitamos el join porque vamos a utilizar la tabla game y la goal 
  
-##### LEFT JOIN
+#### LEFT JOIN
 Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nulos en la tabla de la derecha
  ```ruby
  SELECT teacher.name, dept.name
@@ -237,7 +237,7 @@ Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nul
  ```
   Esta consulta lista todos los departamentos sean nulos o no ya que va a listar a todos los profesores 
  
-##### RIGHT JOIN
+#### RIGHT JOIN
 Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la tabla de la izquierda
  ```ruby
  SELECT teacher.name, dept.name
@@ -246,7 +246,7 @@ Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la t
  ```
   Esta consulta lista todos los detartamentos y si hay alguno nulo no lo lista
  
-##### INNER JOIN
+#### INNER JOIN
 Devuelven únicamente aquellos registros/filas que tienen elementos en las dos tablas
  ```ruby
  SELECT teacher.name, dept.name
@@ -254,7 +254,59 @@ Devuelven únicamente aquellos registros/filas que tienen elementos en las dos t
  ```
   Esta consulta nos lista todos los departamentos y profesores pero si hay algun nulo en cualquiera de los dos no los lista
 
-### DDL
+## DDL
+DDL o lenguaje de definición de datos (en inglés Data Definition Language), es el encargado modificar la estructura de los objetos de la base de datos. Las ordenes que se incluyen para modificar, borrar o definir las tablas en las que se almacenan los datos son: CREATE, ALTER, DROP y TRUNCATE.
 
+### CREATE
+Este comando permite crear nuevas bases de datos, tablas y usuarios.
+* Para crear usuarios usamos la formula "CREATE USER"
+* Para crear tablas usamos la formula "CREATE TABLE"
+* Para crear una nueva base de datos hay dos formulas:
+  * Con permisos restrictivos -> CREATE DATABASE
+  * Con permisos menos restrictivos -> CREATE SHEMA
 
-### DML
+* Ejemplo de como creariamos una tabla:
+ ```ruby
+ CREATE TABLE nombre_tabla;
+ ```
+ ```ruby
+ CREATE TABLE alumnos;
+ ```
+
+### ALTER
+Este comando permite modificar la estructura de una tabla u objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de un campo, agregar/quitar índices a una tabla, etc.
+
+* Ejemplo de como agregar una columna a una tabla
+ ```ruby
+ ALTER TABLE nombre_tabla 
+ ADD nombre_columna TipoDato;
+ ```
+ ```ruby
+ ALTER TABLE alumnos
+ ADD nombre VARCHAR(50);
+ ```
+
+### DROP
+Este comando sirve para eliminar un objeto de la base de datos. Puede ser una tabla, vista, índice, función, procedimiento o cualquier objeto que el motor de la base de datos soporte.
+
+* Ejemplo de como eliminar una columna de una tabla
+ ```ruby
+ ALTER TABLE nombre_tabla
+ DROP COLUMN nombre_columna;
+ ```
+ ```ruby
+ ALTER TABLE alumnos
+ DROP COLUMN nombre;
+ ```
+ 
+### TRUCATE
+Este comando trunca todo el contenido de una tabla, es decir, borra todo el contenido sin borrar la tabla en si.
+
+* Ejemplo de como truncar una tabla
+ ```ruby
+ TRUCATE TABLE nombre_tabla;
+ ```
+ ```ruby
+ TRUCATE TABLE alumnos;
+ ```
+## DML
