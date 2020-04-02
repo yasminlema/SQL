@@ -31,6 +31,9 @@
   * [DROP](#DROP)
   * [TRUCATE](#TRUCATE)
 * [DML](#DML)
+  * [INSERT INTO](#INSERT-INTO)
+  * [UPDATE](#UPDATE)
+  * [DELETE FROM](#DELETE-FROM)
   
 ## ¿Que es SQL?
 Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos permite el acceso y manipulación de datos en una base de datos, y además se puede integrar a lenguajes de programación, por ejemplo ASP o PHP, y en combinación con cualquier base de datos específica, por ejemplo MySQL, SQL Server, MS Access, entre otras. Dentro de SQL podemos encontrar 6 sublenguajes:
