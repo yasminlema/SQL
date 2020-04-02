@@ -25,6 +25,8 @@
     * [INNER JOIN](#INNER-JOIN)
 * [DDL](#DDL)
   * [CREATE](#CREATE)
+    * [CREATE DOMAIN](#CREATE-DOMAIN)
+      * [Parametros](#Parametros)
   * [ALTER](#ALTER)
   * [DROP](#DROP)
   * [TRUCATE](#TRUCATE)
@@ -276,6 +278,42 @@ Este comando permite crear nuevas bases de datos, tablas y usuarios.
  ```ruby
  CREATE TABLE alumnos;
  ```
+ 
+ #### CREATE DOMAIN
+ Sirve para crear tipos de datos 
+ ```ruby
+ CREATE DOMAIN nombre_dato  TipoDato;
+ ```
+ 
+ ##### Parametros
+ * nombre_dato: nombre del tipo de dato que queremos crear.
+ * TipoDato: tipo de dato que vamos a crear. Puede ser:
+   * MONEY, DATE, INTEGER, NUMBER, CHAR, VARCHAR
+ * CONSTRAINT: establece un nombre opcional a una restriccion. Si no especificamos    el nombre el sistema genera uno el mismo.
+ * NUL/NOT NULL: con esto especificamos que los valores pueden o no ser nulos. El valor por defacto es NULL.
+ * UNIQUE: lo pondremos cuando el dato sea unico.
+ * ON DELETE CASCADE: permite eliminar datos de las tablas secundarias automáticamente cuando elimina los datos de la tabla primaria.
+ * ON UPDATE CASCADE: permite actualizar datos de las tablas secundarias automáticamente cuando añade los datos a la tabla primaria.
+ 
+ ```rudy
+ CREATE DOMAIN nombre_válido VARCHAR(30);
+CREATE TABLE Ubicación (
+  Nome_Sede         Nome_Válido,
+  Nome_Departamento Nome_Válido,
+  CONSTRAINT PK_Ubicación
+    PRIMARY KEY (Nome_Sede, Nome_Departamento),
+  CONSTRAINT FK_Sede
+    FOREIGN KEY (Nome_Sede)
+    REFERENCES Sede (Nome_Sede)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT FK_Departamento
+    FOREIGN KEY (Nome_Departamento)
+    REFERENCES Departamento (Nome_Departamento)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+ ```
 
 ### ALTER
 Este comando permite modificar la estructura de una tabla u objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de un campo, agregar/quitar índices a una tabla, etc.
@@ -314,3 +352,39 @@ Este comando trunca todo el contenido de una tabla, es decir, borra todo el cont
  TRUCATE TABLE alumnos;
  ```
 ## DML
+DML o lenguaje de manipulación de datos (en inglés Data Manipulation Language) es un lenguaje proporcionado por el sistema de gestión de base de datos que permite a los usuarios llevar a cabo las tareas de consulta o manipulación de los datos, organizados por el modelo de datos adecuado.
+### INSERT INTO
+Agrega uno o más registros a una (**_y sólo una_**) tabla en una base de datos relacional.
+```ruby
+INSERT INTO nombre_tabla [(<columna1>,<columna2>,...)] 
+[VALUES (<valor1A>,<valor2A>,...),(<valor1B>,<valor2B>,...)
+...| SELECT...);
+```
+Ejemplo:
+```ruby
+INSERT INTO world (name, continent, area)
+ VALUES ('France', 'Europe', 100),
+   ('Germany', 'Europe', 10)
+```
+### UPDATE
+Se utiliza para modificar los valores de un conjunto de registros existentes en una tabla.
+```ruby
+UPDATE nombre_tabla
+SET <atributo1> = <valor1>, <atributo2> = <valor2>;
+```
+Ejemplo:
+```ruby
+UPDATE world
+SET continent='Africa';
+```
+### DELETE FROM
+Borra uno o más registros existentes en una tabla.
+```ruby
+DELETE FROM nombre_tabla
+[WHERE <predicado>];
+```
+Ejemplo:
+```ruby
+DELETE FROM world
+WHERE continent='Europe';
+```
