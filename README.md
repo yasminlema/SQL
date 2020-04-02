@@ -378,7 +378,7 @@ SET <atributo1> = <valor1>, <atributo2> = <valor2>;
 Ejemplo:
 ```ruby
 UPDATE world
-SET continent='Africa';
+SET continent='Asia';
 ```
 ### DELETE FROM
 Borra uno o más registros existentes en una tabla.
@@ -389,5 +389,5 @@ DELETE FROM nombre_tabla
 Ejemplo:
 ```ruby
 DELETE FROM world
-WHERE continent='Europe';
+WHERE continent='Africa';
 ```
