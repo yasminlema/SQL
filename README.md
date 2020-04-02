@@ -423,7 +423,9 @@ WHERE continent='Africa';
 
 ## Instalacion de MySQL
 Lo primero que debemos hacer es entrar en la Web oficial de MySQL y despues una vez que hayamos entrado clicaremos en "MySQL Comunnity Server". Una vez ahi elegimos la plataforma en la que queremos instalar MySQL. A continuacion clicaremos sobre "Go to Download Page".
+
 ![captura1](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura.png)
 
 En la siguiente pagina escogeremos la segunda opcion (la de mas tamaño) ya que en una descargaremos el paquete completo y en el otro no.
+
 ![captura2](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura2.png)
