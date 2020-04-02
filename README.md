@@ -24,6 +24,12 @@
     * [RIGHT JOIN](#right-join)
     * [INNER JOIN](#INNER-JOIN)
 * [DDL](#DDL)
+  * [Tipos de datos](#Tipos-de-datos)
+    * [Datos de carácter](#Datos-de-carácter)
+    * [Datos numericos](#Datos-numericos)
+    * [Datos de fecha y hora](#Datos-de-fecha-y-hora)
+    * [Datos monetarios](#Datos-monetarios)
+    * [Propiedades de datos](#Propiedades-de-datos)
   * [CREATE](#CREATE)
     * [CREATE DOMAIN](#CREATE-DOMAIN)
       * [Parametros](#Parametros)
@@ -266,6 +272,28 @@ Devuelven únicamente aquellos registros/filas que tienen elementos en las dos t
 ## DDL
 DDL o lenguaje de definición de datos (en inglés Data Definition Language), es el encargado modificar la estructura de los objetos de la base de datos. Las ordenes que se incluyen para modificar, borrar o definir las tablas en las que se almacenan los datos son: CREATE, ALTER, DROP y TRUNCATE.
 
+### Tipos de datos
+#### Datos de carácter
+* CHAR: Los datos deben de tener una longitud fija.
+* VARCHAR: Puede variar en el número de carácteres, es decir, el valor asignado no es fijo.
+
+#### Datos numericos
+* INT: numero entero
+* SMALLINT: numero entero pequeño
+* DECIMAL: Tipo de datos que se utiliza para almacenar números decimales que pueden tener hasta 38 dígitos.
+* FLOAT: numero en coma flotante
+#### Datos de fecha y hora
+* DATE: año, mes y dia
+* TIME: hora, minuto y segundo
+* TIMESTAMP: DATE + TIME
+
+#### Datos monetarios 
+* MONEY: Cantidad monetaria positiva o negativa.
+ 
+#### Propiedades de datos
+* NULL/NOT NULL: al poner NULL estamos indicando que el contenido de dicha columna no es obligatorio, si se necesita especificar que el campo es obligatorio se implementará con NOT NULL.
+* IDENTITY: Propiedad sólo aplicada a campos numéricos, ya que define un autoincremento  automático de valores.
+
 ### CREATE
 Este comando permite crear nuevas bases de datos, tablas y usuarios.
 * Para crear usuarios usamos la formula "CREATE USER"
@@ -291,9 +319,9 @@ Este comando permite crear nuevas bases de datos, tablas y usuarios.
  ##### Parametros
  * nombre_dato: nombre del tipo de dato que queremos crear.
  * TipoDato: tipo de dato que vamos a crear. Puede ser:
-   * MONEY, DATE, INTEGER, NUMBER, CHAR, VARCHAR
+   * MONEY, DATE, INT, NUMBER, CHAR, VARCHAR
  * CONSTRAINT: establece un nombre opcional a una restriccion. Si no especificamos    el nombre el sistema genera uno el mismo.
- * NUL/NOT NULL: con esto especificamos que los valores pueden o no ser nulos. El valor por defacto es NULL.
+ * NUL/NOT NULL: al poner NULL estamos indicando que el contenido de dicha columna no es obligatorio, si se necesita especificar que el campo es obligatorio se implementará con NOT NULL. El valor por defecto es NULL.
  * UNIQUE: lo pondremos cuando el dato sea unico.
  * ON DELETE CASCADE: permite eliminar datos de las tablas secundarias automáticamente cuando elimina los datos de la tabla primaria.
  * ON UPDATE CASCADE: permite actualizar datos de las tablas secundarias automáticamente cuando añade los datos a la tabla primaria.
