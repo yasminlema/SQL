@@ -430,4 +430,46 @@ En la siguiente pagina escogeremos la segunda opcion (la de mas tamaño) ya que 
 
 ![captura2](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura2.png)
 
-Una vez descargado se nos abrira la siguiente ventana donde elegiremos la opcion de "Developer Default"
+Una vez descargado se nos abrira la siguiente ventana donde elegiremos la opcion de "Developer Default" que nos instalara todo automaticamente y clicamos en next.
+
+![captura3](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura3.png)
+
+A continuación, nos aparecera la ventana de preparacion de los paquetes para su instalacion. Algunos en vez de poner  "INSTL DONE" pondra "Manual" porque no se van a poder instalar ya que nos faltan algunos paquetes necesarios en nuestro equipo. Clicamos en next.
+
+![captura4](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura4.png)
+
+El siguiente paso sera ejecutar la instalacion de los paquetes.
+
+![captura5](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura5.png)
+
+Una vez finalizada la instalacion de todos los paquetes procederemos a la configuracion de MySQL. Elegiremos la primera opcion: "Standalone MySQL Server/Classic MySQL Replication".
+
+![captura7](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura7.png)
+
+Despues elegiremos la opcion que mas se ajuste a lo nosotros queremos:
+* Development Computer: Está orientado a ser un equipo en el que está instalado el servidor SQL, pero también el cliente para las consultas de bases de datos. Si nuestro equipo es doméstico y trabajamos de forma normal en él está será la opción que debemos elegir.
+* Server Computer: esta segunda opción será orientada a ordenadores utilizados para funciones de servidor, por ejemplo, servidor web con bases de datos.
+* Dedicated Computer: la tercera opción es par el caso en que queremos crear un equipo solo y exclusivamente orientado a bases de datos. Por ejemplo, una máquina virtual en la que se almacenen nuestras bases de datos.
+Yo elegi la opcion de "Dedicated Computer" ya cree una maquina virtual para las bases de datos y es donde estoy instalando el programa.
+
+![captura8](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura8.png)
+
+A continuacion, estableceremos una contraseña para conectarnos al servidor SQL y crearemos un usuario.
+
+![captura9](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura9.png)
+
+Configuramos el nombre del servicio para MySQL
+
+![captura10](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura10.png)
+
+Para finalizar, en la ultima  pantalla pulsamos en "Execute" para las acciones y activar los servicios.
+
+![captura11](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura11.png)
+
+Lo ultimo que debemos hacer sera conectar con el servidor mediante el usuario root y la contraseña que hayamos definido anteriormente clicando en "Check"
+
+![captura12](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura12.png)
+
+Y como podemos ver ha sido instalado correctamente.
+
+![captura14](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura14.PNG)
