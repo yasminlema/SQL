@@ -429,3 +429,5 @@ Lo primero que debemos hacer es entrar en la Web oficial de MySQL y despues una 
 En la siguiente pagina escogeremos la segunda opcion (la de mas tamaño) ya que en una descargaremos el paquete completo y en el otro no.
 
 ![captura2](https://github.com/yasminlema/apuntes-SQL/blob/master/Imagenes/Captura2.png)
+
+Una vez descargado se nos abrira la siguiente ventana donde elegiremos la opcion de "Developer Default"
