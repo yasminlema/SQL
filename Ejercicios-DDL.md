@@ -33,4 +33,20 @@
 
 ## Naves espaciais
 
-![captura14](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura14.PNG)
+![captura1](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura.PNG)
+
+![captura2](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura2.PNG)
+
+![captura3](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura3.PNG)
+
+![captura5](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura5.PNG)
+
+![captura6](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura6.PNG)
+
+![captura8](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura8.PNG)
+
+![captura9](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura9.PNG)
+
+![captura10](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura10.PNG)
+
+![captura11](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura11.PNG)
