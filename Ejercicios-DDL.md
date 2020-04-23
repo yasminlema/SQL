@@ -1,7 +1,7 @@
 # SQL
 ## Índice
-* [Proxectos de investigación](#proxectos-de-investigación)
-* [Naves-espaciais](#naves-espaciais)
+* [Base de datos Proxectos de investigación](#proxectos-de-investigación)
+* [Base de datos Naves-espaciais](#naves-espaciais)
 
 ## Proxectos de investigación
 
