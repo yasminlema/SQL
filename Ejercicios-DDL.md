@@ -31,7 +31,11 @@ Ahora crearemos las tablas que queremos que tenga nuestra base de datos
 
 ![captura12](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura12.PNG)
 
+Una vez creada la base de datos y las tablas podremos ver las bases de datos y tablas que tenemos creadas con el comando "**_SHOW DATABASES;_**" y "**_SHOW TABLES;_**"
+
 ![captura13](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura13.PNG)
+
+Y para ver los elementos de cada tabla usaremos el comando "**_describe NombreTabla;_**"
 
 ![captura14](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura14.PNG)
 
