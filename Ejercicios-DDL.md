@@ -40,8 +40,11 @@ Y para ver los elementos de cada tabla usaremos el comando "**_describe NombreTa
 ![captura14](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura14.PNG)
 
 ## Naves espaciais
+Creamos la base de datos con el comando **_"CREATE BATABASE NombreDatabase;"_** y a contunuacion usamos el comando "**_USE NombreDatabase;_**"
 
 ![captura1](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura.PNG)
+
+Ahora crearemos las tablas que queremos que tenga nuestra base de datos 
 
 ![captura2](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura2.PNG)
 
@@ -55,6 +58,10 @@ Y para ver los elementos de cada tabla usaremos el comando "**_describe NombreTa
 
 ![captura9](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura9.PNG)
 
+Una vez creada la base de datos y las tablas podremos ver las bases de datos y tablas que tenemos creadas con el comando "**_SHOW DATABASES;_**" y "**_SHOW TABLES;_**"
+
 ![captura10](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura10.PNG)
+
+Y para ver los elementos de cada tabla usaremos el comando "**_describe NombreTabla;_**"
 
 ![captura11](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/naves%20espaciais/Captura11.PNG)
