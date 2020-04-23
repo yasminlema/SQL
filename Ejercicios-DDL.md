@@ -5,7 +5,11 @@
 
 ## Proxectos de investigación
 
+Creamos la base de datos con el comando **_"CREATE BATABASE NombreDatabase;"_** y a contunuacion usamos el comando "**_USE NombreDatabase;_**"
+
 ![captura1](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura.PNG)
+
+Ahora crearemos las tablas que queremos que tenga nuestra base de datos 
 
 ![captura3](https://github.com/yasminlema/SQL/blob/master/imagenes%20ejercicios%20DDL/proxectos%20de%20investigacion/Captura3.PNG)
 
