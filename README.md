@@ -60,7 +60,7 @@ Es un lenguaje declarativo de comunicación dentro de las bases de datos que nos
 ## Clausulas SQL
 ### SELECT
 Sirve para que en la tabla se nos muestren las columnas que nosotros queremos 
-  ```ruby
+  ```sql
   SELECT population 
   FROM world
   WHERE name = 'Germany';
@@ -68,14 +68,14 @@ Sirve para que en la tabla se nos muestren las columnas que nosotros queremos
   Con esta consulta solo nos aparecera la columna de la poblacion 
 ### FROM
 Sirve para seleccionar la tabla de donde vamos a seleccionar los datos
-  ```ruby
+  ```sql
   SELECT population
   FROM world;
   ```
   Con esta consulta le estamos indicando que los datos que le pedimos se encuentran en la tabla world
 ### WHERE
 Aquí es donde estableceremos la condición que van a tener que cumplir todas las filas para salir en el resultado de la consulta
-  ```ruby
+  ```sql
   SELECT name 
   FROM world
   WHERE population >= 200000000;
@@ -84,7 +84,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
   
 #### Simbolos
 * % : sutituye de cero a varios caracteres
-  ```ruby
+  ```sql
   SELECT name
   FROM world
   WHERE name = '%United%';
@@ -92,28 +92,28 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
    El resultado de esta consulta seran todos los paises que contengan el nombre United (United Kingdom)
     
 * _ : sustituye **_un solo_** caracter 
-  ```ruby
+  ```sql
   SELECT name 
   FROM world
   WHERE name = 'Cub_';
   ```
    El resultado de esta consulta seran todos los paises que empiecen por Cub y a continuacion tengan un caracter mas (Cuba)
 * = : igual a 
-  ```ruby
+  ```sql
   SELECT population
   FROM world
   WHERE name = 'Germany';
   ```
     El resultado de esta consulta sera la poblacion de Alemania
  * </>/<=/>= : menor o mayor y igual que 
-   ```ruby
+   ```sql
    SELECT name
    FROM world
    WHERE population >= 1000000;
    ```
     El resultado de esta consulta seran todos los paises con una poblacion mayor o igual a 1000000
 * <> : no es igual a 
-  ```ruby
+  ```sql
   SELECT name
   FROM world
   WHERE name <> '%United%';
@@ -122,7 +122,7 @@ Aquí es donde estableceremos la condición que van a tener que cumplir todas la
     
 #### IN
 Coje todos los miembros que estan entre paréntesis 
- ```ruby
+ ```sql
  SELECT name, population
  FROM world
  WHERE name IN ('France', 'Germany', 'Italy');
@@ -131,7 +131,7 @@ Coje todos los miembros que estan entre paréntesis
  
 #### BETWEEN 
 Coje todos los miembros contenidos en el rango 
- ```ruby
+ ```sql
  SELECT name, area
  FROM world
  WHERE area BETWEEN 200000 AND 250000;
@@ -140,7 +140,7 @@ Coje todos los miembros contenidos en el rango
  
 #### LIKE
 Es utilizado para buscar un patron especifico
- ```ruby
+ ```sql
  SELECT name
  FROM world
  WHERE name LIKE '%United%';
@@ -149,7 +149,7 @@ Es utilizado para buscar un patron especifico
  
 ### ORDER BY
 Sirve para especificar el orden en el que quieres que aparezca la respuesta
- ```ruby
+ ```sql
  SELECT name, population 
  FROM world
  WHERE name IN ('Sweden', 'Norway', 'Denmark')
@@ -159,7 +159,7 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
  
 ### DISTINCT
  Sirve para que en las consultas no aparezcan filas repetidas
-  ```ruby
+  ```sql
   SELECT DISTINCT continent
   FROM world;
   ```
@@ -167,7 +167,7 @@ Sirve para especificar el orden en el que quieres que aparezca la respuesta
   
 ### HAVING
 Se utiliza para incluir condiciones del tipo SUM, MAX, .. 
- ```ruby
+ ```sql
  SELECT name
  FROM casting JOIN actor
    ON  actorid = actor.id
@@ -179,7 +179,7 @@ Se utiliza para incluir condiciones del tipo SUM, MAX, ..
  
 ### GROUP BY
 Nos permite agrupar las filas resultado de una consulta en conjuntos y aplicar funciones sobre esos conjuntos de filas
- ```ruby
+ ```sql
  SELECT 
   teamname,
   COUNT(teamid)
@@ -190,7 +190,7 @@ Nos permite agrupar las filas resultado de una consulta en conjuntos y aplicar f
  
 ### ROUND
 Se utiliza para redondear a número de decimales especificado
- ```ruby
+ ```sql
  SELECT name, 
         CONCAT(CAST(ROUND(100*population/
                                 (SELECT population 
@@ -205,7 +205,7 @@ Se utiliza para redondear a número de decimales especificado
  
 ### LENGTH
 Se utiliza para obtenes la longitud de una cadena 
- ```ruby
+ ```sql
  SELECT name, capital
  FROM world
  WHERE LENGTH(name) = LENGTH(capital);
@@ -214,13 +214,13 @@ Se utiliza para obtenes la longitud de una cadena
  
 ### CONCAT
 Esta función devuelve una cadena resultante de la combinación de dos o más valores de cadena de una manera integral
- ```ruby
+ ```sql
  SELECT CONCAT("SQL ", "is ", "fun!") AS ConcatenatedString;
  ```
   Esta consulta nos daria una columna llamada ConcatenatedString donde pondria "SQL is fun!"
 ### SUM
 Permite obtener la suma total de los valores de una columna de tipo numérico
-```ruby
+```sql
 SELECT SUM(population)
 FROM world;
 ```
@@ -228,7 +228,7 @@ FROM world;
 
 ### COUNT
 Devuelve el número de registros que cumplen una determinada condición
- ```ruby
+ ```sql
  SELECT COUNT(name)
  FROM world
  WHERE area >= 1000000;
@@ -237,7 +237,7 @@ Devuelve el número de registros que cumplen una determinada condición
  
 ### JOIN
 Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
- ```ruby
+ ```sql
  SELECT player,teamid,stadium,mdate
  FROM game JOIN goal ON (id = matchid)
  WHERE teamid = 'GER';
@@ -246,7 +246,7 @@ Se utiliza para cuando necesitamos utilizar varias tablas para hacer la consulta
  
 #### LEFT JOIN
 Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nulos en la tabla de la derecha
- ```ruby
+ ```sql
  SELECT teacher.name, dept.name
  FROM teacher 
  LEFT JOIN dept ON (teacher.dept = dept.id);
@@ -255,7 +255,7 @@ Se obtienen todas las filas de la tabla colocada a la izquierda, aunque haya nul
  
 #### RIGHT JOIN
 Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la tabla de la izquierda
- ```ruby
+ ```sql
  SELECT teacher.name, dept.name
  FROM teacher 
  RIGHT JOIN dept ON (teacher.dept = dept.id);
@@ -264,7 +264,7 @@ Se obtienen todas las filas de la tabla de la derecha, aunque haya nulos en la t
  
 #### INNER JOIN
 Devuelven únicamente aquellos registros/filas que tienen elementos en las dos tablas
- ```ruby
+ ```sql
  SELECT teacher.name, dept.name
  FROM teacher INNER JOIN dept ON (teacher.dept = dept.id);
  ```
@@ -304,16 +304,16 @@ Este comando permite crear nuevas bases de datos, tablas y usuarios.
   * Con permisos menos restrictivos -> CREATE SHEMA
 
 * Ejemplo de como creariamos una tabla:
- ```ruby
+ ```sql
  CREATE TABLE nombre_tabla;
  ```
- ```ruby
+ ```sql
  CREATE TABLE alumnos;
  ```
  
  #### CREATE DOMAIN
  Sirve para crear tipos de datos 
- ```ruby
+ ```sql
  CREATE DOMAIN nombre_dato  TipoDato;
  ```
  
@@ -327,7 +327,7 @@ Este comando permite crear nuevas bases de datos, tablas y usuarios.
  * ON DELETE CASCADE: permite eliminar datos de las tablas secundarias automáticamente cuando elimina los datos de la tabla primaria.
  * ON UPDATE CASCADE: permite actualizar datos de las tablas secundarias automáticamente cuando añade los datos a la tabla primaria.
  
- ```rudy
+ ```sql
  CREATE DOMAIN nombre_válido VARCHAR(30);
 CREATE TABLE Ubicación (
   Nome_Sede         Nome_Válido,
@@ -351,11 +351,11 @@ CREATE TABLE Ubicación (
 Este comando permite modificar la estructura de una tabla u objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de un campo, agregar/quitar índices a una tabla, etc.
 
 * Ejemplo de como agregar una columna a una tabla
- ```ruby
+ ```sql
  ALTER TABLE nombre_tabla 
  ADD nombre_columna TipoDato;
  ```
- ```ruby
+ ```sql
  ALTER TABLE alumnos
  ADD nombre VARCHAR(50);
  ```
@@ -364,11 +364,11 @@ Este comando permite modificar la estructura de una tabla u objeto. Se pueden ag
 Este comando sirve para eliminar un objeto de la base de datos. Puede ser una tabla, vista, índice, función, procedimiento o cualquier objeto que el motor de la base de datos soporte.
 
 * Ejemplo de como eliminar una columna de una tabla
- ```ruby
+ ```sql
  ALTER TABLE nombre_tabla
  DROP COLUMN nombre_columna;
  ```
- ```ruby
+ ```sql
  ALTER TABLE alumnos
  DROP COLUMN nombre;
  ```
@@ -377,46 +377,46 @@ Este comando sirve para eliminar un objeto de la base de datos. Puede ser una ta
 Este comando trunca todo el contenido de una tabla, es decir, borra todo el contenido sin borrar la tabla en si.
 
 * Ejemplo de como truncar una tabla
- ```ruby
+ ```sql
  TRUCATE TABLE nombre_tabla;
  ```
- ```ruby
+ ```sql
  TRUCATE TABLE alumnos;
  ```
 ## DML
 DML o lenguaje de manipulación de datos (en inglés Data Manipulation Language) es un lenguaje proporcionado por el sistema de gestión de base de datos que permite a los usuarios llevar a cabo las tareas de consulta o manipulación de los datos, organizados por el modelo de datos adecuado.
 ### INSERT INTO
 Agrega uno o más registros a una (**_y sólo una_**) tabla en una base de datos relacional.
-```ruby
+```sql
 INSERT INTO nombre_tabla [(<columna1>,<columna2>,...)] 
 [VALUES (<valor1A>,<valor2A>,...),(<valor1B>,<valor2B>,...)
 ...| SELECT...);
 ```
 Ejemplo:
-```ruby
+```sql
 INSERT INTO world (name, continent, area)
  VALUES ('France', 'Europe', 100),
    ('Germany', 'Europe', 10)
 ```
 ### UPDATE
 Se utiliza para modificar los valores de un conjunto de registros existentes en una tabla.
-```ruby
+```sql
 UPDATE nombre_tabla
 SET <atributo1> = <valor1>, <atributo2> = <valor2>;
 ```
 Ejemplo:
-```ruby
+```sql
 UPDATE world
 SET continent='Asia';
 ```
 ### DELETE FROM
 Borra uno o más registros existentes en una tabla.
-```ruby
+```sql
 DELETE FROM nombre_tabla
 [WHERE <predicado>];
 ```
 Ejemplo:
-```ruby
+```sql
 DELETE FROM world
 WHERE continent='Africa';
 ```
